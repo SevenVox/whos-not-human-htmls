@@ -3,117 +3,146 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Privacy Policy - Who's Not Human</title>
+    <meta name="description" content="Privacy policy for a photo organization app, explaining photo access, location, local storage, system backups, sharing, export, and information deletion.">
+    <title>Privacy Policy</title>
     <style>
+        * { box-sizing: border-box; }
         body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-            line-height: 1.6;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "PingFang SC", "Microsoft YaHei", sans-serif;
+            line-height: 1.75;
             max-width: 800px;
             margin: 0 auto;
             padding: 40px 20px;
             color: #333;
             background: #f5f5f5;
+            overflow-wrap: anywhere;
         }
         .container {
             background: white;
             padding: 40px;
             border-radius: 8px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
         }
         h1 {
             color: #1a1a1a;
             border-bottom: 3px solid #00d4ff;
             padding-bottom: 10px;
+            margin-top: 0;
         }
-        h2 {
-            color: #555;
-            margin-top: 30px;
-        }
-        .date {
-            color: #888;
-            font-style: italic;
-            margin-bottom: 30px;
-        }
+        h2 { color: #555; margin-top: 30px; font-size: 1.2rem; }
+        .date { color: #666; font-style: italic; margin-bottom: 30px; }
         .highlight {
             background: #f0f8ff;
             padding: 15px;
             border-left: 4px solid #00d4ff;
             margin: 20px 0;
         }
-        ul {
-            padding-left: 20px;
-        }
-        li {
-            margin: 10px 0;
-        }
+        ul { padding-left: 20px; }
+        li { margin: 10px 0; }
+        a { color: #006e89; text-underline-offset: 3px; }
+        a:focus-visible { outline: 2px solid #006e89; outline-offset: 4px; }
+        .pending { color: #855000; font-weight: 600; }
         .contact {
             background: #1a1a1a;
-            color: #00d4ff;
+            color: #e8faff;
             padding: 20px;
             border-radius: 5px;
             margin-top: 30px;
         }
-        .contact a {
-            color: #00d4ff;
+        .contact h2 { color: #00d4ff; margin-top: 0; }
+        .contact a { color: #00d4ff; }
+        .contact a:focus-visible { outline-color: #00d4ff; }
+        .contact p:last-child { margin-bottom: 0; }
+        @media (max-width: 600px) {
+            body { padding: 24px 12px; }
+            .container { padding: 24px 20px; }
+            h1 { font-size: 1.75rem; }
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <h1>Privacy Policy</h1>
-        <p class="date">Last updated: April 20, 2026</p>
-        
+    <main class="container" aria-labelledby="privacy-title">
+        <h1 id="privacy-title">Privacy Policy</h1>
+        <p class="date">Last updated: October 22, 2026<br>Effective date: October 22, 2026</p>
+
         <div class="highlight">
-            <strong>Who's Not Human</strong> is committed to protecting your privacy. This privacy policy explains how we handle information when you use our mobile game.
+            This app provides photo organization, a photo map, time-based albums, experiences, and a memory star map. This policy explains how the app accesses, processes, and stores related information.
         </div>
 
-        <h2>Information We Do Not Collect</h2>
-        <p>Who's Not Human does not collect, store, or transmit any personal information. Specifically:</p>
-        <ul>
-            <li>No personal identification information (name, email, phone number)</li>
-            <li>No location data or GPS information</li>
-            <li>No device identifiers or usage statistics</li>
-            <li>No browsing history or search queries</li>
-            <li>No photos, videos, or microphone access</li>
-            <li>No contact lists or social media accounts</li>
-        </ul>
+        <section aria-labelledby="photos-title">
+            <h2 id="photos-title">1. Photo Access and Local Processing</h2>
+            <p>Once you grant photo access, the app reads photo content, capture dates and times, existing photo location information, and photo identifiers within the scope of your permission. This information is used to display photos, automatically organize them by date and location, and generate visit records, experiences, and a memory star map.</p>
+            <p>You can allow access to all photos or selected photos, and you can change or revoke access at any time in iOS Settings. If you change the scope of access, some photos and their associated content may no longer be displayed.</p>
+            <p>Original photos are managed by Apple's system photo library. The developer does not use this app to upload original photos, photo locations, or locally organized content to developer-operated servers. Dates, locations, titles, and notes that you manually add in the app are used for local organization and do not modify the original photo files in the system photo library.</p>
+        </section>
 
-        <h2>Local Data Storage</h2>
-        <p>All game progress, settings, and preferences are stored <strong>locally on your device only</strong> using AsyncStorage. This data:</p>
-        <ul>
-            <li>Never leaves your device</li>
-            <li>Is not backed up to any external servers</li>
-            <li>Can be deleted by uninstalling the app</li>
-        </ul>
+        <section aria-labelledby="location-title">
+            <h2 id="location-title">2. Location, Maps, and Network Services</h2>
+            <p>The app requests "While Using the App" location permission only when you tap the "Current Location" button. It does not request permission for continuous background location access. Viewing locations already recorded in photos does not require permission to access your device's location.</p>
+            <p>Map display, place searches, and reverse geocoding use Apple system services. These features may require an internet connection and may send coordinates, search queries, and information needed to complete requests to Apple. Apple processes this information under its applicable policies. For details, please see <a href="https://www.apple.com/legal/privacy/data/en/apple-maps/">Apple Maps &amp; Privacy</a>.</p>
+            <p>If original photos are stored only in iCloud, the system photo service may download the required content according to your settings. Photos that have not been downloaded and map content that has not been cached are not guaranteed to be available offline.</p>
+        </section>
 
-        <h2>Third-Party Services</h2>
-        <p>This app does not use any third-party services, including:</p>
-        <ul>
-            <li>No advertising networks (AdMob, Unity Ads, etc.)</li>
-            <li>No analytics tools (Firebase Analytics, Flurry, etc.)</li>
-            <li>No crash reporting services (Crashlytics, etc.)</li>
-            <li>No social media SDKs</li>
-            <li>No payment processing services</li>
-        </ul>
+        <section aria-labelledby="storage-title">
+            <h2 id="storage-title">3. Local Storage and System Backups</h2>
+            <p>Photo indexes, organizational relationships, titles, notes, manually entered dates and locations, and similar information are stored in the app's local database and files on your device.</p>
+            <p>User-created organizational information may be included in iOS system backups. Rebuildable indexes and caches are configured to be excluded from system backups. Actual backup, synchronization, and restoration behavior depends on your device settings and Apple services.</p>
+            <p>The storage and backup of original photos in the system photo library, as well as iCloud Photos synchronization, are managed by Apple's system photo library and your related settings.</p>
+        </section>
 
-        <h2>Children's Privacy</h2>
-        <p>This app is suitable for users aged 9 and above. We do not knowingly collect any information from children under 13. Since we collect no data whatsoever, there is no risk of children's information being gathered.</p>
+        <section aria-labelledby="sharing-title">
+            <h2 id="sharing-title">4. System Photo Albums, Sharing, and Export</h2>
+            <p>When you choose to save a photo chapter as an album in the system photo library, the app creates or updates the corresponding album's name and photo membership after confirmation. It does not modify the original photo files. Album changes may sync according to your iCloud Photos settings.</p>
+            <p>Sharing and export occur only when you initiate them, and you choose the recipients. Shared content may include photos, text, dates, or locations. Please review it before sending.</p>
+            <p>Recipients or external apps process the information they receive according to their own rules. Exported organizational data does not include original photos and cannot replace a backup of your original photos.</p>
+        </section>
 
-        <h2>Data Security</h2>
-        <p>Since no data is collected or transmitted, there are no data security risks associated with personal information. Your game data remains entirely on your device.</p>
+        <section aria-labelledby="services-title">
+            <h2 id="services-title">5. Accounts, Advertising, and Analytics Services</h2>
+            <p>The current version does not require account registration, has no developer-operated account service, and does not integrate third-party advertising, behavioral analytics, or crash-reporting SDKs.</p>
+            <p>The developer does not use this app for cross-app advertising tracking.</p>
+            <p>Network access, synchronization, and information processing by Apple system services are governed by Apple's own policies and user settings.</p>
+        </section>
 
-        <h2>Changes to This Policy</h2>
-        <p>We may update this privacy policy from time to time. Any changes will be posted on this page with an updated revision date.</p>
+        <section aria-labelledby="rights-title">
+            <h2 id="rights-title">6. Information Retention, Permissions, and Deletion</h2>
+            <p>Locally stored organizational information remains on your device until you modify it, clear the app's data, or delete the app from your device. After you revoke photo access, saved organizational information, such as titles and notes, may remain until you actively clear it.</p>
+            <p>You can:</p>
+            <ul>
+                <li>Change or revoke photo and location permissions in iOS Settings.</li>
+                <li>Edit relevant organizational information in the app.</li>
+                <li>Export organizational data you want to keep.</li>
+                <li>Clear local app data in the app's settings.</li>
+                <li>Delete the app from your device.</li>
+            </ul>
+            <p>Clearing app data does not delete original photos from Apple's system photo library. It does delete indexes, notes, manually entered locations, and organizational relationships stored by this app. Please export any information you want to keep beforehand.</p>
+            <p>Existing system backups, exported files, and shared copies are not automatically deleted when local app data is cleared. They must be managed separately through the relevant system services or recipients. Some app data may be restored when you restore your device from a system backup.</p>
+        </section>
 
-        <h2>Your Rights</h2>
-        <p>Since we do not collect any personal data, there is no personal data to access, modify, or delete. To remove all local game data, simply uninstall the application from your device.</p>
+        <section aria-labelledby="support-title">
+            <h2 id="support-title">7. Support Emails</h2>
+            <p>If you choose to contact us by email, we receive the email address, issue description, and attachments you provide. We use this information to handle your request and communicate with you as necessary.</p>
+            <p>Please do not send your entire private photo library or sensitive information unrelated to your issue. If you provide screenshots, we recommend obscuring any unnecessary personal content first.</p>
+            <p>Support email retention and deletion rules: <span class="pending">[To be completed: the actual retention period, deletion conditions, and how deletion requests are handled]</span>.</p>
+        </section>
 
-        <div class="contact">
-            <h2>Contact Us</h2>
-            <p>If you have any questions about this privacy policy or our data practices, please contact us:</p>
+        <section aria-labelledby="security-title">
+            <h2 id="security-title">8. Data Security and Protection of Minors</h2>
+            <p>The app uses the iOS app sandbox and system file protection mechanisms to protect local information. Please secure access to your device and exported files, and choose sharing recipients carefully. No security measure can eliminate all risks.</p>
+            <p>We value the protection of minors' personal information. We recommend that minors use this app and manage photo permissions under the guidance of a parent or guardian. Guardians with questions about related information processing or support emails can contact us at the email address below.</p>
+        </section>
+
+        <section aria-labelledby="updates-title">
+            <h2 id="updates-title">9. Policy Updates</h2>
+            <p>We may update this policy as the app's features or information processing practices change. We will indicate the new effective or revision date on the policy page.</p>
+        </section>
+
+        <section class="contact" aria-labelledby="contact-title">
+            <h2 id="contact-title">Contact Us</h2>
+            <p>If you have questions about this policy, permission use, data deletion, or other privacy matters, please contact:</p>
+            <p>Operator: Minimoss Studio</p>
             <p>Email: <a href="mailto:minimoss@126.com">minimoss@126.com</a></p>
-            <p>Developer: Mini Mos Lab</p>
-        </div>
-    </div>
+        </section>
+    </main>
 </body>
 </html>
